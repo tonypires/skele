@@ -19,7 +19,7 @@ namespace Skele.Scripting {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Scripts {
@@ -61,7 +61,15 @@ namespace Skele.Scripting {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to var require = function (filePath) {
+        ///    console.log(&quot;require: &quot; + filePath);
+        ///    return (function () {
+        ///        var module = {};
+        ///        var exports = module.exports = {};
+        ///        eval(file(filePath));
+        ///        return module.exports;
+        ///    })();
+        ///};.
         /// </summary>
         internal static string env {
             get {

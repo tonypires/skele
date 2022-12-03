@@ -1,7 +1,6 @@
 ﻿using Skele.Interop.MetaModel;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using SmoConnection = Microsoft.SqlServer.Management.Common.ServerConnection;
 using SmoServer = Microsoft.SqlServer.Management.Smo.Server;
@@ -11,6 +10,7 @@ using SmoColumn = Microsoft.SqlServer.Management.Smo.Column;
 using SmoDataType = Microsoft.SqlServer.Management.Smo.DataType;
 using Skele.Interop.Mapping;
 using Skele.Interop.Sql;
+using Microsoft.Data.SqlClient;
 
 namespace Skele.Interop.SqlServer
 {
@@ -176,7 +176,7 @@ namespace Skele.Interop.SqlServer
 
         private void WithSmo(Action<SmoDatabase> action)
         {
-            using (var conn = CreateConnection(open: false))
+            using (SqlConnection conn = CreateConnection(open: false))
             {
                 var server = new SmoServer(new SmoConnection(conn));
                 var database = server.Databases[databaseName];

@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SmoDatabase = Microsoft.SqlServer.Management.Smo.Database;
-using SmoTable = Microsoft.SqlServer.Management.Smo.Table;
-using SmoColumn = Microsoft.SqlServer.Management.Smo.Column;
 using Skele.Interop.MetaModel;
 using Skele.Interop.Mapping;
 
